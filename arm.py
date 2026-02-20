@@ -2,9 +2,10 @@
 arm.py
 
 2-DOF planar manipulator utilities:
-- forward kinematics
-- trajectory -> end-effector path
-- simple plotting helpers
+- Forward kinematics
+- Forward kinematics batch for trajectory generation, joint space to task space
+- Inducing random noise for ground truth data
+- Plots
 
 """
 
@@ -68,7 +69,6 @@ def generate_jerky_joint_trajectory(
     """
     Generate a deliberately jerky joint trajectory for testing.
 
-    This is NOT physically optimal; it's meant to be "ugly" so denoising later is obvious.
 
     Returns:
         thetas: (T, 2) in radians
